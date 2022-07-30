@@ -17,7 +17,7 @@ def main():
     worker = ThreadPoolExecutor(maxWorker)
 
     for x in range(len(flist)):
-        t1 = worker.submit(conv, num, flist_iter, flist[x], imgi, imgo)
+        worker.submit(conv, num, flist_iter, flist[x], imgi, imgo)
         num+=1
 
 def conv(num, flist_iter, x, imgi, imgo):
